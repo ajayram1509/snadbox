@@ -1,0 +1,1 @@
+chmod 777 $1 && cd $1 && isolate --stderr-to-stdout --stdout=res.json --meta=meta.json --wall-time=15 --run $2

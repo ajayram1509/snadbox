@@ -1,0 +1,1 @@
+FOLDER=$(isolate --cg --init --box-id=$1) && cd $FOLDER"/box" && cp "/var/local/lib/"$2".py" . && isolate --box-id=$1 -p --cg-mem 256000 --cg --stderr-to-stdout --stdout=cmp_res.json --meta=cmp_meta.json --wall-time=15 --run /usr/bin/python3 $2"."$3
